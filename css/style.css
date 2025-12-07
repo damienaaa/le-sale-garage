@@ -1,0 +1,341 @@
+:root {
+    --primary: #2d5016;
+    --secondary: #7fb069;
+    --accent: #e6aa68;
+    --dark: #1a1a1a;
+    --light: #f5f5f5;
+    --border: #d4d4d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Navigation / Filtres */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.filter-btn.active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    font-weight: bold;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stats span {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Grid catalogue */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Carte produit */
+.produit-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.produit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.produit-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: var(--border);
+}
+
+.produit-card-content {
+    padding: 1.5rem;
+}
+
+.produit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.produit-id {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.produit-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+}
+
+.tag {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.produit-prix {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-top: 1rem;
+}
+
+.produit-statut {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.statut-en_stock {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.statut-en_ligne {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.statut-vendu {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Page produit détail */
+.produit-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.produit-images {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.produit-image-main {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: var(--border);
+}
+
+.produit-image-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+}
+
+.thumb {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumb:hover,
+.thumb.active {
+    border-color: var(--primary);
+}
+
+.produit-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.produit-info h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.info-section {
+    margin: 2rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+/* Loading et messages */
+#loading,
+#no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .produit-detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .produit-images {
+        position: static;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sans titre - Le Sale Garage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Retour au catalogue</a>
+            <h1>🥑 Le Sale Garage</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="produit-detail-container">
+            <div class="produit-images">
+                <img id="main-image" src="photos/241207-002_vue1.jpg" alt="Sans titre" class="produit-image-main" onerror="this.src='photos/placeholder.jpg'">
+                <div class="produit-image-thumbs">
+                    <img src="photos/241207-002_vue1.jpg" alt="Sans titre 1" class="thumb active" onclick="changeMainImage('photos/241207-002_vue1.jpg', this)" onerror="this.src='photos/placeholder.jpg'"><img src="photos/241207-002_vue2.jpg" alt="Sans titre 2" class="thumb " onclick="changeMainImage('photos/241207-002_vue2.jpg', this)" onerror="this.src='photos/placeholder.jpg'"><img src="photos/241207-002_detail.jpg" alt="Sans titre 3" class="thumb " onclick="changeMainImage('photos/241207-002_detail.jpg', this)" onerror="this.src='photos/placeholder.jpg'">
+                </div>
+            </div>
+            
+            <div class="produit-info">
+                <div class="produit-id">#241207-002</div>
+                <h2>Sans titre</h2>
+                
+                <div class="produit-tags">
+                    <span class="tag">vintage</span><span class="tag">années_60</span><span class="tag">laiton</span><span class="tag">design</span>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Prix</h3>
+                    <div class="produit-prix">120€</div>
+                    <span class="produit-statut statut-en_stock">
+                        en stock
+                    </span>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Superbe lampe de bureau articulée des années 60. Structure en laiton patiné avec abat-jour orientable en métal émaillé vert menthe. Système de bras articulé permettant de multiples positions. Parfaite pour un bureau vintage ou une décoration industrielle chic.</p>
+                </div>
+                
+                <div class="info-section"><h3>Dimensions</h3><div style="white-space: pre-line;">- Hauteur maximale : 65 cm
+- Hauteur minimale : 35 cm
+- Profondeur du bras : 45 cm
+- Diamètre abat-jour : 18 cm</div></div>
+                
+                <div class="info-section">
+                    <h3>Informations</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Catégorie</span>
+                            <span class="info-value">luminaire</span>
+                        </div>
+                        <div class="info-item"><span class="info-label">Type</span><span class="info-value">lampe</span></div>
+                        <div class="info-item">
+                            <span class="info-label">Acquisition</span>
+                            <span class="info-value">2024-12-07</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Lieu</span>
+                            <span class="info-value">Maison Uccle - Mme Dupont</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-section"><h3>État</h3><div style="white-space: pre-line;">- **Général** : Très bon
+- **Défauts** : Légères traces d'oxydation sur le laiton (patine naturelle), petite bosse sur l'abat-jour (2mm)
+- **Nettoyage nécessaire** : Oui, dépoussiérage</div></div>
+                
+                <div class="info-section"><h3>Histoire de l'objet</h3><p>Récupérée dans le même lot que les chaises. La dame l'utilisait dans son atelier de couture. Électrification refaite dans les années 90, fonctionne parfaitement.
+
+Potentiel Instagram : ÉNORME - la couleur menthe + laiton = combo parfait pour les amateurs de design</p></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Le Sale Garage - Trouve ton trésor vintage</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeMainImage(src, thumbElement) {
+            document.getElementById('main-image').src = src;
+            document.querySelectorAll('.thumb').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>

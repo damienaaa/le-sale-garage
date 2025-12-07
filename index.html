@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Sale Garage - Brocante & Recyclerie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🥑 Le Sale Garage</h1>
+            <p class="tagline">Achat Vente Objet Cool Adoré D'Occasion</p>
+            <nav>
+                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn" data-filter="luminaire">Luminaire</button>
+                <button class="filter-btn" data-filter="mobilier">Mobilier</button>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats">
+            <span id="total-objets">2 objets</span>
+            <span id="en-stock">2 en stock</span>
+        </div>
+
+        <div id="catalogue" class="grid">
+            
+        <a href="produit-241207-001.html" class="produit-card">
+            <img src="photos/241207-001_vue1.jpg" alt="Sans titre" onerror="this.src='photos/placeholder.jpg'">
+            <div class="produit-card-content">
+                <div class="produit-id">#241207-001</div>
+                <h3>Sans titre</h3>
+                <div class="produit-tags">
+                    <span class="tag">vintage</span><span class="tag">bois</span><span class="tag">années_70</span>
+                </div>
+                <div class="produit-prix">45€</div>
+                <span class="produit-statut statut-en_stock">
+                    en stock
+                </span>
+            </div>
+        </a>
+    
+
+        <a href="produit-241207-002.html" class="produit-card">
+            <img src="photos/241207-002_vue1.jpg" alt="Sans titre" onerror="this.src='photos/placeholder.jpg'">
+            <div class="produit-card-content">
+                <div class="produit-id">#241207-002</div>
+                <h3>Sans titre</h3>
+                <div class="produit-tags">
+                    <span class="tag">vintage</span><span class="tag">années_60</span><span class="tag">laiton</span>
+                </div>
+                <div class="produit-prix">120€</div>
+                <span class="produit-statut statut-en_stock">
+                    en stock
+                </span>
+            </div>
+        </a>
+    
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Le Sale Garage - Trouve ton trésor vintage</p>
+        </div>
+    </footer>
+
+    <script src="js/filter.js"></script>
+</body>
+</html>
